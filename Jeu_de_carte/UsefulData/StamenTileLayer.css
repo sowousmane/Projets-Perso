@@ -1,0 +1,65 @@
+.MyClassInfo{
+    /* haut | droit | bas | gauche */
+    margin: 20px 50px 0px 50px;
+    text-align: center;
+}
+.MyCardEurope, .MyCardAmerique, .MyCardAsie, .MyCardAfrique , .MyCardOceanie
+{
+   
+     width: 500px;
+     height: 400px;
+    margin: 0px 50px 0px auto;
+}
+.MyCardWorld
+{
+   
+     width: 700px;
+     height: 357px;
+    margin: 3px auto 0px auto;
+     
+}
+/* haut | droit | bas | gauche */
+ /* margin:  auto;*/
+footer , #AfricaInfo, #AmericaInfo, #AsiaInfo, #OceanieInfo, #EuropaInfo
+{
+    margin-top: auto;
+    text-align: center;
+}
+
+/*html { overflow-y: hidden; }*/ 
+.bouton
+{
+        background-color: rgb(27, 240, 222);
+        Color:rgb(0, 0, 0);
+        font-weight: bold;
+        border-radius: 10px;
+        text-decoration: none;
+      
+}
+
+/* haut | droit | bas | gauche */
+.modal
+{
+    margin:250px auto auto auto ;
+}
+article {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #45a1ff;
+    color: #fff;
+}
+
+.my-div-icon
+{
+  background-image: url(../Images/Planete_terre.png);
+  background-repeat: no-repeat;
+  width: 5px;
+}
+

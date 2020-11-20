@@ -1,0 +1,13 @@
+
+.mydivform
+{ /* haut | droit | bas | gauche */
+    margin: auto auto  auto 10%;
+}
+.Madiverror
+{
+    color: red;
+}
+form
+{   
+    width: 100px;
+}
