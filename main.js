@@ -7,6 +7,7 @@ var app = new Vue ({
         courses:  'Vue.js',
         image:'./CV_fullstack_SOW.jpg',
         CVvisible: false,
+        CvVis: false,
         /*alt:'It\'s not as visible as clicking in the link below '*/
     
         CvOrCoverLetter:[
@@ -38,9 +39,6 @@ var app = new Vue ({
             { LangWeb: 'multimédia' },
             { LangWeb: 'Angular 8' }
         ],
-        cms:[
-            { CMS: 'WordPress' }
-        ],
         BaseDeDonnee:[
             { DB: 'Oracle' },
             { DB: 'Access' },
@@ -49,49 +47,41 @@ var app = new Vue ({
             { DB: 'MongoDb' },
             { DB: 'MAriaDb' }
         ],
-        Api:[
-            { API: 'Bootstrap' },
-            { API: 'Laravel' },
-            { API: 'ReactJs' },
-            { API: 'Laravel' }
-          ],
-          Reseau:[
+        Reseau:[
             { rsx: 'Reseau TCP/IP' },
             { rsx: 'Système et réseau' },
             { rsx: 'Administration système' }
-          ]
+          ],
+        Api:[
+            { API: 'Bootstrap' },
+            { API: 'Laravel' }
+          ],
+         
+        cms:[
+            { CMS: 'WordPress' }
+        ]
     }, 
     methods: {
     
         ShowMeCap:function(){
-            this.CVvisible=true
+          if(this.CVvisible===true)  
+            this.CVvisible=false
+          else
+            this.CVvisible=false
            
         }
     }
-})/*
-new Vue({
-    el: '.test',
-    data: {
-      isDisplay: false
-    },
-    methods: {
-      show: function () {
-        this.isDisplay = true;
-      },
-      hide: function () {
-        this.isDisplay = false;
-      }
-    }
-  });*/
+})
 // an function that check if our CV is hidden then give use the choice
 // to show the CV else that give use the possibilitie to go to the home
-
+/* 
 function myFunction() {
-    if (x.style.display === "none") {
-      x.style.display = "block";
-      y.style.display = "none";
-    } else {
-      x.style.display = "none";
-      y.style.display = "block";
-    }
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+  } 
+  else {
+    x.style.display = "none";
+    y.style.display = "block";
   }
+} */

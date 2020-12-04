@@ -10,9 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<div class="container"  id="app">
-  <div id="caroussel1">
+  <div class="container">      
+<div id="caroussel1" style="display: none;">
     
     <nav class=" nava navbar navbar-fixed-top">
       <div class="row">
@@ -54,6 +53,7 @@
       </div>
     </div>
   </div>
+  <div  id="app">   
   <div id="welcome1">
     <div class="photo">
       <img src="coeur.png" alt="">
@@ -74,16 +74,16 @@
       <p> I'm going to use {{courses}} 😍, Bootstrap,HTML/CSS, Javascript in this project</p>
       <button class="showMe" onclick="myFunction()">show me your CV and cover letter </button>
       <button class="showMe" v-on:click="ShowMeCap">show me your knowledge below👇</button>
-      
+    
         <div id="showMeYourCapacity" v-if= 'CVvisible==true'>
          <table>
            <tr class="tdModify">
              <td> <b> Programmation</b> </td>
              <td><b>Langages WEB</b></td>
-             <td><b>CMS</b></td>
              <td><b>Bases de données</b></td>
-             <td><b>API</b></td>
              <td><b>Réseaux</b></td>
+             <td><b>API</b></td>
+             <td><b>CMS</b></td>
            </tr>
            <tr>
             <td>
@@ -108,17 +108,18 @@
                 </li>
               </ul>
              </td>
+             
              <td>
               <ul>
-                <li v-for="x in Api">
-                  {{ x.API }}
+                <li v-for="x in Reseau">
+                  {{ x.rsx }}
                 </li>
               </ul>
              </td>
              <td>
               <ul>
-                <li v-for="x in Reseau">
-                  {{ x.rsx }}
+                <li v-for="x in Api">
+                  {{ x.API }}
                 </li>
               </ul>
              </td>
@@ -144,14 +145,6 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="main.js"></script>
+</div>
 </body>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.0.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/8.0.1/firebase-analytics.js"></script>
-
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
 </html>
