@@ -1,0 +1,206 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+     <!-- Bootstrap CSS-->
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+ <!-- Custom CSS-->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body >
+
+<div class="body-file" id="app">
+    <!-- here we have the header -->
+    <div id="pictures">
+      <div  class="text-xs-center text_titre">
+        <div>
+          <h1 class="titre1">DÉCOUVREZ LES OFFRES DU MOMENT</h1>
+          <h3>Vol + HOTEL JUSQU'A -70%</h3>
+          <hr style="height: 8px; color: #050505; background-color: #080808; width: 15%; border: none;">
+          <div class="dropdown">
+            <img src="images/filter_icon.png" alt="" class="img1">
+           <img src="images/below_icon.png" alt="" class="img2" data-toggle="dropdown">
+            <ul class="dropdown-menu myDrop">
+              <li><a class="btn" deroulant href="#">Maurice</a>
+                <ul>
+                  <li><a class="btn" href="#"> Grand Baie</a></li>
+                  <li><a class="btn" href="#">Grand Rivière</a></li>
+                </ul>
+              </li>
+              <li><a class="btn" href="#">Indonésie</a></li>
+              <li><a class="btn" href="#">Maldives</a></li>
+              <li><a class="btn" href="#">Thaïlande</a></li>
+              <li><a class="btn" href="#">Maurice</a></li>
+              <li><a class="btn" href="#">Vietnam</a></li>
+              <li><a class="btn" href="#">Japon</a></li>
+              <li><a class="btn" href="#">Sri Lanka</a></li>
+              <li><a class="btn" href="#">Emirates Arabes Unis</a>
+                  <ul>
+                    <li><a class="btn" href="#"> Dubaï Fairmont Dubaï</a></li>
+                    <li><a class="btn" href="#">Dubaï Hyatt Regency Creek</a></li>
+                  </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <!-- here we have the main body -->
+<div class="myBody">  
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <span   v-for="x in destinations">
+              <div >
+                <div class="col-sm-4 ">
+                  <div class="contenant">
+                    <img v-bind:src="x.image" alt=""> 
+                    <div class="texte_centrer"> {{x.upto}} </div>
+                  </div>
+                  
+                  <div class="tester1">
+                    <h7> <strong>{{ x.redirect_label}}</strong></h7><br>
+                    <div class="row labRat">
+                        <h7> {{x.label}}  {{x.rating}}</h7><br>
+                        <h7 class="prem"> {{ x.tags[0].label}} </h7>
+                        <h7  class="option"> {{ x.tags[1].label}}</h7>
+                    </div> 
+                      <div>  
+                          <button class="im1" onclick="myFunction()" href ="#Maurice1" ><img src="images/next1.png"  alt="" ></button>
+                      </div>
+                  </div> 
+                </div>
+              </div>
+            </span>
+        </div>
+
+        <div class="item">
+          <span   v-for="x in deuxiemeListe">
+            <div>
+              <div class="col-sm-4 ">
+                <div class="contenant">
+                  <img v-bind:src="x.image" alt=""> 
+                  <div class="texte_centrer"> {{x.upto}} </div>
+                </div>
+                
+                <div class="tester1">
+                  <h7> <strong>{{ x.redirect_label}}</strong></h7><br>
+                  <div class="row labRat">
+                      <h7> {{x.label}}  {{x.rating}}</h7><br>
+                      <h7 class="prem"> {{ x.tags[0].label}} </h7>
+                      <h7  class="option"> {{ x.tags[1].label}}</h7>
+                  </div> 
+                    <div>  
+                        <button  class="im1"  onclick="myFunction()"  href ="#Maurice1"><img src="images/next1.png"  alt="" ></button>
+                    </div>
+                </div> 
+              </div>
+            </div>
+          </span>
+        </div>
+      
+      
+      </div>
+
+      <!-- Left and right controls -->
+        <button class=" bouton1  left carousel-control " href="#myCarousel" data-slide="prev"> <strong>&#9666; prev</strong> </button>
+        
+        <button class=" bouton  left carousel-control " href="#myCarousel" data-slide="next"> <strong>next &#9656;</strong> </button>
+        
+    </div>
+
+
+</div>
+</div>
+  <div id="Maurice1">
+    
+    <div class="row">
+      <div class="col-sm-10  bienvenue">
+              <div class="row">
+                <div class="col-sm-1"><button class="im2" onclick="myFunction()" > &#9666;</button></div>
+                <div class="col-sm-11"><img src="images/veepee.png" alt="" class="logo"></div>
+              </div>
+              <h2> &#128071; Une liste de nos hôtels</h2>
+        </div>
+        
+      </div>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    
+        <div class="tdModify col-sm-10">
+          <table class="responstable">
+      
+            <tr>
+              <th>PAYS</th>
+              <th ><span>HÔTELS</span></th>
+              <th>ÉTOILES</th>
+            </tr>
+            <!-- for the countries -->
+            <tr v-for="x in destinations">
+              <td  >{{x.country}} </td><td  >{{x.label}} </td><td  >{{x.rating}} </td>
+            </tr>
+            <tr v-for="x in deuxiemeListe">
+              <td>{{x.country}}</td>  <td  >{{x.label}} </td><td  >{{x.rating}} </td> 
+            </tr>
+
+          </table>
+        </div>
+     
+    </div>
+  </div>  
+</div>
+<!-- ANd here we have the footer -->
+
+  <footer class="col" >
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <h5>REJOIGNEZ  <strong>EMIRATES | THE LIST  </strong>  </h5>
+        <h5> VOL + HÔTEL NÉGOCIÉS  JUSQU'À -70%</h5> 
+      </div> 
+      <div class="col-sm-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+
+      </div>
+      <div class="col-sm-4">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 hashr "></div>
+        <div class="col-sm-4"></div>
+      </div>
+      <div class="col-sm-4">
+
+      </div>
+    </div>
+   
+     
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  
+
+
+
+</body>
+
+</html>

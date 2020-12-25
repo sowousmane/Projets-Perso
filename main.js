@@ -1,13 +1,11 @@
 
-var x = document.getElementById("caroussel1");
-var y = document.getElementById("welcome1");
+
 var app = new Vue ({
     el:'#app',
     data: {
         courses:  'Vue.js',
         image:'./CV_fullstack_SOW.jpg',
         CVvisible: false,
-        CvVis: false,
         /*alt:'It\'s not as visible as clicking in the link below '*/
     
         CvOrCoverLetter:[
@@ -64,24 +62,24 @@ var app = new Vue ({
     methods: {
     
         ShowMeCap:function(){
-          if(this.CVvisible===true)  
-            this.CVvisible=false
-          else
-            this.CVvisible=false
+         this.CVvisible===true
            
         }
     }
 })
 // an function that check if our CV is hidden then give use the choice
 // to show the CV else that give use the possibilitie to go to the home
-/* 
+var x = document.getElementById('caroussel1');
+var y = document.getElementById('welcome1');
+
 function myFunction() {
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    y.style.display = "none";
+  if (x.style.display === 'none') {
+    x.style.display = 'block';
+    y.style.display = 'none';
   } 
   else {
-    x.style.display = "none";
-    y.style.display = "block";
+    x.style.display = 'none';
+    y.style.display = 'block';
   }
-} */
+}
+
